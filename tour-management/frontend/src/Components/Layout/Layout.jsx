@@ -1,19 +1,21 @@
-import React from 'react'
+import React from "react";
+import { useLocation } from "react-router-dom";
 
-
-import  Header  from "./../Header/Header";
+import Header from "./../Header/Header";
 import Routers from "../../router/Routers";
-import  Footer  from "./../Footer/Footer";
-
+import Footer from "./../Footer/Footer";
 
 const Layout = () => {
-  return (
-   <>
-  <Header />
-  <Routers />
-  <Footer />
-   </>
-  )
-}
+  const location = useLocation();
+  const hideChrome = ["/login", "/register"].includes(location.pathname);
 
-export default Layout
+  return (
+    <>
+      {!hideChrome && <Header />}
+      <Routers />
+      {!hideChrome && <Footer />}
+    </>
+  );
+};
+
+export default Layout;

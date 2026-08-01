@@ -7,7 +7,11 @@
     "scripts": {
     "start": "node index.js",
     "start-dev": "nodemon index.js",
+    "vercel-build": "echo 'Backend serverless - no build step'",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=18"
   },
   "keywords": [],
   "author": "",
