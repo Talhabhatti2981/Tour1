@@ -4,9 +4,9 @@
   "description": "",
   "type": "module",
   "main": "index.js",
-    "scripts": {
-    "start": "node index.js",
-    "start-dev": "nodemon index.js",
+  "scripts": {
+    "start": "node init && node index.js",
+    "start-dev": "node init && nodemon index.js",
     "vercel-build": "echo 'Backend serverless - no build step'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
