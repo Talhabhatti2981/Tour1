@@ -2,7 +2,6 @@ import React, {useRef, useState, useEffect, useContext} from 'react'
 import '../styles/tour-details.css'
 import { Container, Row, Col, Form, ListGroup } from 'reactstrap'
 import {useParams} from 'react-router-dom'
-import tourData from '../assets/data/tours'
 import calculateAvgRating from './../utils/avgRating';
 import avatar from '../assets/images/avatar.jpg';
 import Booking from '../Components/Booking/Booking'
@@ -107,7 +106,7 @@ return <>
                 {totalRating === 0 ? (
                         "Not rated"
                         ) : (
-                     <span>({reviews ?.length})</span>
+                     <span>({reviews?.length})</span>
                     )}
             </span>
 
